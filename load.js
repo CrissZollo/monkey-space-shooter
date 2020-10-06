@@ -1,6 +1,8 @@
+let player;
+
 window.onload = function()
 {
-    app = new PIXI.Application({resizeTo:window, backgroundColor: 0xAAAAAA});
+    let app = new PIXI.Application({resizeTo:window, backgroundColor: 0xAAAAAA});
     document.body.appendChild(app.view);
 
 
