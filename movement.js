@@ -1,4 +1,3 @@
-
 // Pointer Movement
 app.stage.interactive = true;
 app.stage.on("pointermove", movePlayer);

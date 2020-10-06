@@ -1,10 +1,7 @@
-let app;
-let player = document.getElementById('load').player;
 let bullets = [];
 let bulletSpeed = 10;
 
 app.stage.interactive = true;
-app.stage.on("pointermove", movePlayer);
 
 document.querySelector("#gameDiv").appendChild(app.view);
 document.querySelector("#gameDiv").addEventListener("pointerdown", fireBullet);
