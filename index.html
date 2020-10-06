@@ -10,10 +10,10 @@
         <script src="js/pixi.min.js"></script>
 
         <script>
-            window.onload = function(){
-                app = new PIXI.Application({width: window.innerWidth, height: window.innerHeight, backgroundColor: 0xAAAAAA});
+             window.onload = function(){
+                app = new PIXI.Application({resizeTo:window, backgroundColor: 0xffffff});
                 document.body.appendChild(app.view);
-            }
+             }
 
 
         </script>
@@ -21,7 +21,7 @@
 
     </head>
     <body>
-        
-        <script src="code.js" async defer></script>
+        <div id="gameDiv"></div>
+        <script src="bullet.js" async defer></script>
     </body>
 </html>
