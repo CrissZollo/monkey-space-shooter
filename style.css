@@ -15,10 +15,20 @@ body{
     padding-bottom: 10%;
     color:White;
 }
+.leftImg{
+    height:100px;
+    float: left;
+}
+
+.rightImg{
+    height:100px;
+    float: right;
+}
 h1{
     color:white;
     font-size: 40px;    
     font-family: 'Orbitron';
+    margin-right:0;
 }
 
 #startBtn{
