@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let player;
 
 window.onload = function()
@@ -15,3 +16,5 @@ window.onload = function()
     app.stage.addChild(player);
 
 }
+=======
+>>>>>>> f13198c1b84b2f1e5ccce82c73416b3eb69eda5f
