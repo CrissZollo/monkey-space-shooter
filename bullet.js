@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-let player;
-let bullets = [];
-let bulletSpeed = 10;
-
-=======
 let bullets = [];
 let bulletSpeed = 10;
 
 app.stage.interactive = true;
->>>>>>> f13198c1b84b2f1e5ccce82c73416b3eb69eda5f
 
 document.querySelector("#gameDiv").appendChild(app.view);
 document.querySelector("#gameDiv").addEventListener("pointerdown", fireBullet);

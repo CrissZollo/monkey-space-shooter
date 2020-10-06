@@ -1,5 +1,10 @@
 let bullets = [];
 let bulletSpeed = 10;
+let movementSpeed = 20;
+let velocity = 10;
+let value = 0;
+let isKeyUp = true;
+let isKeyDown = false;
 
 
 window.onload = function()
@@ -13,7 +18,7 @@ window.onload = function()
     player = new PIXI.Sprite.from("images/monkey-1b.png");
     player.anchor.set(0.5);
     player.x = app.view.width / 2;
-    player.y = app.view.height / 2;
+    player.y = app.view.height - 75;
     app.stage.addChild(player);
     
     
@@ -23,8 +28,7 @@ window.onload = function()
     document.querySelector("#gameDiv").addEventListener("pointerdown", fireBullet);
     
     // Pointer Movement
-    app.stage.interactive = true;
-    app.stage.on("pointermove", movePlayer);
+    //app.stage.on("pointermove", movePlayer);
     
     
     // Keyboard Movement
@@ -36,20 +40,46 @@ window.onload = function()
 
 
 
-
             
 // Movement   
 function keysUp(e)
 {
     console.log(e.keyCode);
+
+    if (e.keyCode == 68) 
+    {
+
+        value = 0;
+
+    }
+    if (e.keyCode == 65) 
+    {
+        value = 0;
+    }
 }
 
 function keysDown(e)
 {
     console.log(e.keyCode);
+    if (e.keyCode == 68) 
+    {
+        if (value < 1) 
+        {
+            value += (0.01 * velocity);
+        }
+        player.x += movementSpeed * value;
+    }
+    if (e.keyCode == 65) 
+    {
+        if (value < 1) 
+        {
+            value += (0.01 * velocity);
+        }
+        player.x -= movementSpeed * value;
+    }
 }
 
-
+/*
 function movePlayer(e)
 {
     let pos = e.data.global;
@@ -57,6 +87,7 @@ function movePlayer(e)
     player.x = pos.x;
     player.y = pos.y;
 }
+*/
 
 
 
